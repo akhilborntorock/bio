@@ -1,0 +1,102 @@
+@media screen and (max-width:575px) {
+    .outer-nav>li {
+        font-size: 22px;
+    }
+    .outer-nav>li::before {
+        top: 53%;
+        height: 6px;
+    }
+    .about {
+        p span {
+            display: none;
+        }
+    }
+    .work-slider .item-description {
+        position: relative !important;
+        top: 22px !important;
+        width: 100% !important;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    // ===========================Experience===================================
+    .exp {
+        #slider {
+            width: 89vw !important;
+            height: 60vh !important;
+            .slider-container {
+                height: 100% !important;
+                .slide {
+                    flex-wrap: wrap;
+                    .caption {
+                        padding-bottom: 0 !important;
+                        .circle {
+                            width: 100px !important;
+                            height: 100px !important;
+                        }
+                    }
+                    .description {
+                        padding: 20px !important;
+                        width: 100% !important;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        h2 {
+                            font-size: 20px;
+                            text-align: center;
+                        }
+                        .align-cnt {
+                            div {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .employer {
+            margin-bottom: 10px;
+        }
+    }
+    // ===========================Skills===================================
+    .skills {
+        h2 {
+            margin-top: 0px !important;
+        }
+        .skills-section {
+            margin-top: 70px;
+            #section-1 {
+                height: 70vh !important;
+                nav .controls {
+                    display: flex !important;
+                }
+            }
+        }
+        .skills-new {
+            width: 89vw !important;
+        }
+    }
+    // ===========================Portfolio===================================
+    .gallery-section {
+        .gallery-wrap {
+            height: 55vh !important;
+            .hover-cnt {
+                padding: 0 !important;
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+    .intro--banner {
+        height: 50vh !important;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .exp {
+        #slider {
+            width: 90vw !important;
+        }
+    }
+}

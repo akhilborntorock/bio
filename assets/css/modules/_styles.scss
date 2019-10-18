@@ -1,0 +1,150 @@
+.skills-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 100px;
+    h2 {
+        font-size: 30px;
+    }
+}
+
+.gallery-view {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 80%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 30px auto;
+    text-align: center;
+    h2 {
+        font-size: 30px;
+    }
+}
+
+.btn-view-more {
+    width: 200px;
+    background-color: $highlight;
+    color: $white !important;
+    border: 2px solid $highlight;
+    padding: 12px 25px;
+    border: none;
+    margin: 20px auto;
+}
+
+.btn-view-more:hover {
+    border: 2px solid $white;
+    transition: ease .45s;
+    background-color: transparent;
+}
+
+.hover-cnt {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    div {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.gallery-view {
+    .img-item {
+        position: relative;
+        overflow: hidden;
+    }
+    .img-item:hover .hover-cnt {
+        display: block;
+        padding: 30px;
+        // border: 2px solid $white;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.details {
+    text-align: left;
+}
+
+.details a:hover {
+    color: $highlight;
+}
+
+.social-connect {
+    display: flex;
+}
+
+.social-link {
+    background-color: $highlight;
+    color: $white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 1s;
+    transform: rotateZ(0deg);
+    i {
+        transition-duration: 1s;
+    }
+}
+
+.social-link:last-child {
+    margin-right: 0px;
+}
+
+.social-link:hover {
+    transform: rotateZ(360deg);
+}
+
+a:hover {
+    transition: all 1s ease !important;
+}
+
+.exp {
+    .employer,
+    .duration,
+    .location {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        i {
+            color: $highlight;
+            font-size: 22px;
+            margin-right: 15px;
+        }
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+    }
+    .position {
+        text-align: left;
+    }
+}

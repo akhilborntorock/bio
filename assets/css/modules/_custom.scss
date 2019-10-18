@@ -1,0 +1,696 @@
+                .work-slider {
+                    .content-width {
+                        width: 86%;
+                        height: 65vh;
+                        margin: 0 auto;
+                    }
+                    .slideshow {
+                        position: relative;
+                        width: 100%;
+                        height: 50vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                    }
+                    .slideshow-items {
+                        position: relative;
+                        width: 100%;
+                        height: 300px;
+                    }
+                    .item {
+                        position: absolute;
+                        width: 100%;
+                        height: auto;
+                    }
+                    .item-image-container {
+                        position: relative;
+                        width: 42%;
+                    }
+                    .item-image-container::before {
+                        content: '';
+                        position: absolute;
+                        top: -1px;
+                        left: 0;
+                        width: 101%;
+                        height: 101%;
+                        background: #22222A;
+                        opacity: 0;
+                        z-index: 1;
+                    }
+                    .item-image {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        opacity: 0;
+                        display: block;
+                        /* transition: property name | duration | timing-function | delay  */
+                        transition: opacity .3s ease-out .45s;
+                    }
+                    .item.active .item-image {
+                        opacity: 1;
+                    }
+                    .item.active .item-image-container::before {
+                        opacity: .8;
+                    }
+                    .item-description {
+                        position: absolute;
+                        top: 182px;
+                        right: 0;
+                        width: 50%;
+                        padding-right: 4%;
+                        line-height: 1.8;
+                    }
+                    /* Staggered Vertical Items ------------------------------------------------------*/
+                    .item-header {
+                        position: absolute;
+                        top: 150px;
+                        left: -1.8%;
+                        z-index: 100;
+                    }
+                    .item-header .vertical-part {
+                        margin: 0 -4px;
+                        font-family: 'Montserrat', sans-serif;
+                        -webkit-font-smoothing: auto;
+                        font-size: 7vw;
+                        color: $white;
+                    }
+                    .vertical-part {
+                        overflow: hidden;
+                        display: inline-block;
+                    }
+                    .vertical-part b {
+                        display: inline-block;
+                        transform: translateY(100%);
+                    }
+                    .item-header .vertical-part b {
+                        transition: .5s;
+                    }
+                    .item-description .vertical-part b {
+                        transition: .21s;
+                    }
+                    .item.active .item-header .vertical-part b {
+                        transform: translateY(0);
+                    }
+                    .item.active .item-description .vertical-part b {
+                        transform: translateY(0);
+                    }
+                    /* Controls ----------------------------------------------------------------------*/
+                    .controls {
+                        position: relative;
+                        text-align: right;
+                        z-index: 1000;
+                    }
+                    .controls ul {
+                        list-style: none;
+                    }
+                    .controls ul li {
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin: 3px;
+                        background: #bdbdd5;
+                        cursor: pointer;
+                    }
+                    .controls ul li.active {
+                        background: #6a6a77;
+                    }
+                }
+                
+                // -----------------------------------------------Bar Chart----------------------------------------------------------------
+                .skills-new {
+                    width: 60vw;
+                    .progressBar {
+                        width: 100%;
+                        height: 10px;
+                        position: relative;
+                        border: 1px solid #666;
+                        text-align: center;
+                        color: black;
+                        border-radius: 10px;
+                        overflow: hidden;
+                    }
+                    .progressBar .progressValue {
+                        position: absolute;
+                        left: 0%;
+                        top: 0%;
+                        max-width: 100%;
+                        height: 100%;
+                        background-color: $highlight;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        animation: progressBar 5s linear infinite;
+                    }
+                    .progressBar .progressValue:after {
+                        content: '';
+                        position: absolute;
+                        left: 0%;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 33.33%, transparent 33.33%, transparent 66.66%, rgba(255, 255, 255, 0.4) 66.66%);
+                        background-size: 30px 15px;
+                        animation: progressBarStrip 1s linear infinite;
+                    }
+                    @keyframes progressBar {
+                        0% {
+                            background-color: $highlight;
+                        }
+                        25% {
+                            background-color: $highlight;
+                        }
+                        50% {
+                            background-color: $highlight;
+                        }
+                        75% {
+                            background-color: $highlight;
+                        }
+                        100% {
+                            background-color: $highlight;
+                        }
+                    }
+                    @keyframes progressBarStrip {
+                        0% {
+                            background-position: 0 15px;
+                        }
+                        100% {
+                            background-position: 30px 15px;
+                        }
+                    }
+                }
+                
+                .skills-section {
+                    .bg-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+                    }
+                    .section-header {
+                        padding-top: 5.625em;
+                        text-align: center;
+                    }
+                    .section-header h3 {
+                        margin-bottom: 0.5em;
+                    }
+                    .section-header .line-red {
+                        margin: 2.5em auto 2.9375em auto;
+                    }
+                    .line-red {
+                        display: block;
+                        width: 4em;
+                        height: 0.1875em;
+                        margin: 0 auto;
+                        background: #f38181;
+                    }
+                    /* Main Header Styles */
+                    .main-header {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        z-index: 1000;
+                        font-family: Montserrat, sans-serif;
+                        color: $white;
+                        background: transparent;
+                    }
+                    .main-header .header-wrapper {
+                        display: block;
+                        width: 70%;
+                        margin: 0 auto;
+                        padding-top: 1em;
+                    }
+                    .main-header .header-wrapper .main-logo {
+                        float: left;
+                        font-weight: 700;
+                        font-size: 1.875em;
+                    }
+                    .main-header .header-wrapper .main-menu {
+                        float: right;
+                        text-align: center;
+                    }
+                    .main-header .header-wrapper .main-menu li {
+                        display: inline-block;
+                        padding: 0.75em 1.875em;
+                    }
+                    .main-header .header-wrapper .main-menu li a {
+                        padding-bottom: 0.75em;
+                        text-transform: uppercase;
+                        color: $white;
+                        font-size: 0.875em;
+                    }
+                    .main-header .header-wrapper .main-menu li a:hover {
+                        color: #fce38a;
+                        border-bottom: 0.1875em solid #fce38a;
+                        transition: 0.1s;
+                    }
+                    .main-header .header-wrapper .main-menu li a span {
+                        font-size: 1.2em;
+                    }
+                    .main-header .header-wrapper .main-menu li:last-child {
+                        padding: 0.75em 0;
+                    }
+                    .main-header .header-wrapper .main-menu li:nth-child(6) a:hover,
+                    .main-header .header-wrapper .main-menu li:last-child a:hover {
+                        border: none;
+                    }
+                    /* Section-1 Styles */
+                    #section-1 {
+                        height: 65vh;
+                        color: $white;
+                        background-color: $black;
+                    }
+                    #section-1 .content-slider {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    #section-1 .content-slider input {
+                        display: none;
+                    }
+                    #section-1 .content-slider .slider {
+                        position: relative;
+                        width: inherit;
+                        height: inherit;
+                    }
+                    #section-1 .content-slider .slider .banner {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        z-index: 0;
+                        width: inherit;
+                        height: inherit;
+                        text-align: center;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        transition: all 0.5s ease;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper {
+                        height: 100%;
+                        box-sizing: border-box;
+                        text-align: left !important;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
+                        padding-bottom: 0.3em;
+                        font-weight: 400;
+                        font-size: 2.5em;
+                        text-transform: none;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
+                        font-size: 6em;
+                        line-height: 95%;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
+                        display: block;
+                        width: 4em;
+                        height: 0.1875em;
+                        margin: 2.5em auto;
+                        background: $white;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button {
+                        padding-bottom: 5em;
+                        z-index: 15 !important;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a {
+                        padding: 0.5em 2em;
+                        text-align: center;
+                        font-size: 0.875em;
+                        color: $white;
+                        text-transform: uppercase;
+                        border: 0.1875em solid $white;
+                    }
+                    #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a:hover {
+                        color: $highlight;
+                        border-color: $highlight;
+                        transition: 0.3s;
+                    }
+                    #section-1 .content-slider nav {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        z-index: 10;
+                        text-align: center;
+                    }
+                    #section-1 .content-slider nav .controls {
+                        display: block;
+                        width: 100%;
+                        margin: 0 auto;
+                        color: $white;
+                    }
+                    #section-1 .content-slider nav .controls label {
+                        position: relative;
+                        display: inline-block;
+                        width: 20%;
+                        height: 3.1em;
+                        overflow: hidden;
+                        margin: 0 1em;
+                        padding-top: 1em;
+                        text-align: left;
+                        text-transform: uppercase;
+                        font-size: 1em;
+                        color: #f6eac5;
+                        font-weight: 400;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                    }
+                    #section-1 .content-slider nav .controls label .progressbar {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 3px;
+                        width: 100%;
+                        background: #f6eac5;
+                        z-index: 100;
+                    }
+                    #section-1 .content-slider nav .controls label .progressbar .progressbar-fill {
+                        position: inherit;
+                        width: inherit;
+                        height: inherit;
+                        margin-left: -100%;
+                        background: $highlight;
+                    }
+                    #section-1 .content-slider nav .controls label span {
+                        font-size: 1.4em;
+                        font-weight: 700;
+                    }
+                    #section-1 .content-slider nav .controls label:hover {
+                        color: $highlight;
+                    }
+                    #section-1 .content-slider #banner1:checked~.slider #top-banner-1,
+                    #section-1 .content-slider #banner2:checked~.slider #top-banner-2,
+                    #section-1 .content-slider #banner3:checked~.slider #top-banner-3,
+                    #section-1 .content-slider #banner4:checked~.slider #top-banner-4 {
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                    #section-1 .content-slider #banner1:checked~nav label:nth-of-type(1),
+                    #section-1 .content-slider #banner2:checked~nav label:nth-of-type(2),
+                    #section-1 .content-slider #banner3:checked~nav label:nth-of-type(3),
+                    #section-1 .content-slider #banner4:checked~nav label:nth-of-type(4) {
+                        cursor: default;
+                        color: $white;
+                        transition: all 0.5s;
+                    }
+                    #section-1 .content-slider #banner1:checked~nav label:nth-of-type(1) .progressbar,
+                    #section-1 .content-slider #banner2:checked~nav label:nth-of-type(2) .progressbar,
+                    #section-1 .content-slider #banner3:checked~nav label:nth-of-type(3) .progressbar,
+                    #section-1 .content-slider #banner4:checked~nav label:nth-of-type(4) .progressbar {
+                        background: $white;
+                    }
+                    #section-1 .content-slider #banner1:checked~nav label:nth-of-type(1) .progressbar-fill,
+                    #section-1 .content-slider #banner2:checked~nav label:nth-of-type(2) .progressbar-fill,
+                    #section-1 .content-slider #banner3:checked~nav label:nth-of-type(3) .progressbar-fill,
+                    #section-1 .content-slider #banner4:checked~nav label:nth-of-type(4) .progressbar-fill {
+                        animation: progressBarFill 5s linear;
+                    }
+                    /* Animations */
+                    @keyframes progressBarFill {
+                        from {
+                            margin-left: -100%;
+                        }
+                        to {
+                            margin-left: 0;
+                        }
+                    }
+                }
+                
+                // -----------------------------------------------Gallery----------------------------------------------------------------
+                .gallery-section {
+                    width: 100%;
+                    .gallery-wrap {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 70vh;
+                    }
+                    .img-item {
+                        flex: 1;
+                        height: 100%;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: none;
+                        transition: flex 0.8s ease;
+                    }
+                    .img-item:hover {
+                        flex: 7;
+                    }
+                    .item-1 {
+                        background-image: url("https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80");
+                    }
+                    .item-2 {
+                        background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80");
+                    }
+                    .item-3 {
+                        background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80");
+                    }
+                    .item-4 {
+                        background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80");
+                    }
+                    .item-5 {
+                        background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
+                    }
+                }
+                
+                // ----------------------------------------------Experience Slider----------------------------------------------------------
+                .exp {
+                    .description {
+                        padding: 30px;
+                        p,
+                        h2,
+                        h3 {
+                            font-weight: 300 !important;
+                        }
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%
+                    }
+                    #slider {
+                        position: relative;
+                        top: 50px;
+                        width: 70vw;
+                        height: 250px;
+                        border: 1px solid #333;
+                    }
+                    #slider:before,
+                    #slider:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0px;
+                        right: 0px;
+                        z-index: -1;
+                    }
+                    #slider:after {
+                        right: 30px;
+                        left: auto;
+                        // -webkit-transform: skew(8deg) rotate(3deg);
+                        // -ms-transform: skew(8deg) rotate(3deg);
+                        -transform: skew(8deg) rotate(3deg)
+                    }
+                    #slider input {
+                        display: none
+                    }
+                    #slider .slider-container {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 250px;
+                        overflow: hidden
+                    }
+                    #slider #slides {
+                        position: absolute;
+                        width: 300%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        overflow: hidden;
+                        -webkit-animation: slider 10s infinite;
+                        animation: slider 10s infinite
+                    }
+                    #slider #slides:hover {
+                        -webkit-animation-play-state: paused;
+                        animation-play-state: paused
+                    }
+                    #slider #slides .slide {
+                        position: relative;
+                        width: 33.33333333%;
+                        height: 100%;
+                        float: left;
+                        overflow: hidden
+                    }
+                    #slider #slides .slide .caption {
+                        width: 30%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $white;
+                        .circle {
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 50%;
+                            background-color: $highlight;
+                        }
+                    }
+                    #slider .timeline {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 3px;
+                        width: 0;
+                        background-color: $highlight;
+                        -webkit-animation: timeline 10s infinite;
+                        animation: timeline 10s infinite
+                    }
+                    #slider #slides:hover~.timeline {
+                        -webkit-animation-play-state: paused;
+                        animation-play-state: paused
+                    }
+                    /*--- Start Slider animation ---*/
+                    @-webkit-keyframes slider {
+                        0%,
+                        25%,
+                        100% {
+                            left: 0
+                        }
+                        30%,
+                        55% {
+                            left: -100%
+                        }
+                        60%,
+                        85% {
+                            left: -200%
+                        }
+                    }
+                    @keyframes slider {
+                        0%,
+                        25%,
+                        100% {
+                            left: 0
+                        }
+                        30%,
+                        55% {
+                            left: -100%
+                        }
+                        60%,
+                        85% {
+                            left: -200%
+                        }
+                    }
+                    @-webkit-keyframes timeline {
+                        0%,
+                        30%,
+                        60%,
+                        100% {
+                            width: 0
+                        }
+                        25%,
+                        55%,
+                        85% {
+                            width: 100%
+                        }
+                    }
+                    @keyframes timeline {
+                        0%,
+                        30%,
+                        60%,
+                        100% {
+                            width: 0
+                        }
+                        25%,
+                        55%,
+                        85% {
+                            width: 100%
+                        }
+                    }
+                    @media screen and (max-width: 480px) {
+                        #slider #slides .slide .caption {
+                            width: 100%;
+                            height: auto;
+                            top: auto;
+                            bottom: 0;
+                            padding: 20px 8%
+                        }
+                        #slider #slides .slide .caption p {
+                            font-size: 100%
+                        }
+                    }
+                    /*--- End Slider animation ---*/
+                    #slider {
+                        .slide {
+                            display: flex;
+                        }
+                        .description {
+                            width: 70%;
+                            // background: $black;
+                        }
+                    }
+                }
+                
+                // -------------------------------------------------------------------Logo Animation ---------------------------------------------------------------------
+                .header {
+                    svg {
+                        display: block;
+                        font: 10.5em 'Montserrat';
+                        width: auto;
+                        height: 60px;
+                        margin: 0 auto;
+                    }
+                    .text-copy {
+                        fill: none;
+                        stroke: white;
+                        stroke-dasharray: 6% 29%;
+                        stroke-width: 5px;
+                        stroke-dashoffset: 0%;
+                        animation: stroke-offset 5.5s infinite linear;
+                    }
+                    .text-copy:nth-child(1) {
+                        stroke: $highlight;
+                        animation-delay: -1;
+                    }
+                    .text-copy:nth-child(2) {
+                        stroke: #2c3d99;
+                        animation-delay: -2s;
+                    }
+                    .text-copy:nth-child(3) {
+                        stroke: #6aabd0;
+                        animation-delay: -3s;
+                    }
+                    .text-copy:nth-child(4) {
+                        stroke: #020516;
+                        animation-delay: -4s;
+                    }
+                    .text-copy:nth-child(5) {
+                        stroke: #27117b;
+                        animation-delay: -5s;
+                    }
+                    @keyframes stroke-offset {
+                        100% {
+                            stroke-dashoffset: -35%;
+                        }
+                    }
+                }
+                
+                @keyframes stroke-offset {
+                    100% {
+                        stroke-dashoffset: -35%;
+                    }
+                }
+                
+                .intro {
+                    @keyframes RevealText {
+                        from {
+                            width: 0;
+                        }
+                    }
+                    @keyframes Blink {
+                        0% {
+                            opacity: 0
+                        }
+                        100% {
+                            opacity: 1
+                        }
+                    }
+                }
