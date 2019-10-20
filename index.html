@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
     <link rel="stylesheet" href="./style.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.7/slick.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -104,11 +104,11 @@
                             </div>
                         </li>
 
-                        <li class="l-section section">
+                        <li class="l-section section wow FadeInUp" data-wow-duration="2s" data-wow-delay="5s">
                             <div class="about">
-                                <div class="about--banner">
+                                <div class="about--banner ">
                                     <h2>About<br />Me</h2>
-                                    <p class="hypertext">
+                                    <p>
                                         Software Professional with 3+ years of experience in various facets of Software Engineering like wire framing, UI/UX Design & Back end Development. Was started career as a UI/UX Designer at Naico Information Technology Services. but now working on Mobile
                                         Application Development too.
                                         <br /><br /> Experienced in Frond end development, Back end development and UI Design, Mobile application development & Web site development. Handled International clients like Qatar Foundation, GameStop, QNTA etc...
@@ -565,7 +565,10 @@
             <li>Contact</li>
         </ul>
     </div>
-
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         window.jQuery ||

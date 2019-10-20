@@ -17,6 +17,10 @@
     }
 }
 
+body {
+    overflow-x: hidden !important;
+}
+
 .gallery-view {
     position: relative;
     display: -webkit-box;

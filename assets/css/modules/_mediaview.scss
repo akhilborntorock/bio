@@ -17,13 +17,21 @@
         width: 100% !important;
     }
     body {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+    }
+    .skills {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     // ===========================Experience===================================
     .exp {
         #slider {
             width: 89vw !important;
             height: 60vh !important;
+            top: 20px !important;
             .slider-container {
                 height: 100% !important;
                 .slide {
@@ -64,7 +72,7 @@
             margin-top: 0px !important;
         }
         .skills-section {
-            margin-top: 70px;
+            margin-top: 0px;
             #section-1 {
                 height: 70vh !important;
                 nav .controls {
@@ -90,6 +98,19 @@
     }
     .intro--banner {
         height: 50vh !important;
+    }
+    .about--banner h2 {
+        font-size: 40px !important;
+    }
+    .l-section {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .work-slider .content-width {
+        height: auto !important;
     }
 }
 
