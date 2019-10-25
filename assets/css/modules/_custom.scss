@@ -529,7 +529,8 @@
                             width: 200px;
                             height: 200px;
                             border-radius: 50%;
-                            background-color: $highlight;
+                            background-color: transparent;
+                            border: 1px solid $bdr;
                         }
                     }
                     #slider .timeline {
@@ -653,7 +654,7 @@
                         animation-delay: -2s;
                     }
                     .text-copy:nth-child(3) {
-                        stroke: #6aabd0;
+                        stroke: #2c3d99;
                         animation-delay: -3s;
                     }
                     .text-copy:nth-child(4) {
@@ -691,4 +692,10 @@
                             opacity: 1
                         }
                     }
+                }
+                
+                // -------------------------------------------------------------------Banner Text Animation ---------------------------------------------------------------------
+                #str {
+                    font-size: 68px;
+                    font-weight: 900;
                 }

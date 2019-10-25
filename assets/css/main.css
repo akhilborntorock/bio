@@ -1976,6 +1976,10 @@ a:hover {
   text-align: left;
 }
 
+.intro--banner h1 {
+  margin: 0 !important;
+}
+
 @media screen and (max-width: 767px) {
   .outer-nav > li {
     font-size: 22px;
@@ -2109,6 +2113,24 @@ a:hover {
   }
   .skills-section #section-1 {
     height: 50vh !important;
+  }
+  .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .exp #slider {
+    width: 89vw !important;
   }
 }
 
@@ -2809,7 +2831,8 @@ a:hover {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: #0f33ff;
+  background-color: transparent;
+  border: 1px solid #666;
 }
 
 .exp #slider .timeline {
@@ -2942,7 +2965,7 @@ a:hover {
 }
 
 .header .text-copy:nth-child(3) {
-  stroke: #6aabd0;
+  stroke: #2c3d99;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
 }
@@ -3005,6 +3028,11 @@ a:hover {
   100% {
     opacity: 1;
   }
+}
+
+#str {
+  font-size: 68px;
+  font-weight: 900;
 }
 
 /*!

@@ -136,4 +136,16 @@
     .skills-section #section-1 {
         height: 50vh !important;
     }
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .exp #slider {
+        width: 89vw !important;
+    }
 }
