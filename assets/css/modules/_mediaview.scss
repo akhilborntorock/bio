@@ -1,4 +1,4 @@
-@media screen and (max-width:575px) {
+@media screen and (max-width:767px) {
     .outer-nav>li {
         font-size: 22px;
     }
@@ -119,5 +119,21 @@
         #slider {
             width: 90vw !important;
         }
+    }
+    .l-section {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .work-slider .content-width {
+        height: auto !important;
+    }
+    .gallery-section .gallery-wrap {
+        height: 50vh !important;
+    }
+    .skills-section #section-1 {
+        height: 50vh !important;
     }
 }
