@@ -2074,6 +2074,9 @@ a:hover {
   .gallery-section .gallery-wrap .hover-cnt p {
     display: none;
   }
+  .gallery-view {
+    height: 93% !important;
+  }
   .intro--banner {
     height: 50vh !important;
   }
@@ -2090,6 +2093,9 @@ a:hover {
   }
   .work-slider .content-width {
     height: auto !important;
+  }
+  #str {
+    font-size: 55px !important;
   }
 }
 
@@ -2131,6 +2137,12 @@ a:hover {
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .exp #slider {
     width: 89vw !important;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .skills .media-hide {
+    display: none;
   }
 }
 
